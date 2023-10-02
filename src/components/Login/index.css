@@ -10,18 +10,6 @@
   width: 100%;
 }
 
-.login-form-input-container {
-  width: 90%;
-  height: 35px;
-  outline: none;
-  border: 1px solid #94a3b8;
-  padding: 10px;
-  font-family: Roboto;
-  color: #909090;
-  border-radius: 4px;
-  margin-bottom: 26px;
-}
-
 .margin-remover {
   margin-bottom: 14px;
 }

@@ -1,10 +1,41 @@
 .nav-container {
   padding: 16px;
   padding-left: 36px;
+  padding-right: 24px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .header-logo {
   width: 100px;
+}
+
+.header-right-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-theme-button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-theme-icon {
+  height: 20px;
+  width: 30px;
+  margin-right: 16px;
+}
+
+.header-profile-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 16px;
+}
+
+.header-sun-icon {
+  fill: #ffffff;
 }

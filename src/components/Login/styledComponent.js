@@ -29,6 +29,19 @@ export const Label = styled.label`
   font-weight: 600;
 `
 
+export const Input = styled.input`
+  width: 90%;
+  height: 35px;
+  outline: none;
+  background-color: ${props => (props.darkTheme ? '#181818' : '#ffffff')};
+  border: 1px solid #94a3b8;
+  padding: 10px;
+  font-family: Roboto;
+  color: #909090;
+  border-radius: 4px;
+  margin-bottom: 26px;
+`
+
 export const CheckboxLabel = styled.label`
   font-family: Roboto;
   color: ${props => (props.darkTheme ? '#ffffff' : '#1e293b')};
