@@ -1,0 +1,10 @@
+.nav-container {
+  padding: 16px;
+  padding-left: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 100px;
+}

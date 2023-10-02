@@ -1,0 +1,58 @@
+.login-logo {
+  width: 300px;
+  align-self: center;
+  margin-bottom: 56px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-form-input-container {
+  width: 90%;
+  height: 35px;
+  outline: none;
+  border: 1px solid #94a3b8;
+  padding: 10px;
+  font-family: Roboto;
+  color: #909090;
+  border-radius: 4px;
+  margin-bottom: 26px;
+}
+
+.margin-remover {
+  margin-bottom: 14px;
+}
+
+.login-form-checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.login-form-check-box {
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+}
+
+.login-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 90%;
+  border: 0;
+  margin-top: 24px;
+  padding: 10px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.login-err-msg {
+  font-family: Roboto;
+  color: #ff0b37;
+}
