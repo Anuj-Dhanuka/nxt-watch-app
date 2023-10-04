@@ -1,0 +1,39 @@
+.home-card-container {
+  margin-top: 16px;
+  width: 277px;
+  margin-right: 16px;
+}
+
+.home-card-main-image {
+  width: 100%;
+}
+
+.home-card-bottom-container {
+  margin-top: 10px;
+  display: flex;
+}
+
+.home-card-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.home-card-name {
+  font-family: Roboto;
+  color: #7e858e;
+  margin-top: 12px;
+}
+
+.home-card-views-years-container {
+  display: flex;
+  align-items: center;
+}
+
+.home-card-years {
+  font-family: Roboto;
+  color: #7e858e;
+  margin-top: 12px;
+  margin-left: 20px;
+  list-style-type: disc;
+}

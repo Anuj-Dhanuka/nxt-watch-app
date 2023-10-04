@@ -1,0 +1,33 @@
+.left-nav-bg-container {
+  height: 100%;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.ln-top-icon-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.left-nav-top-icon {
+  fill: #7e858e;
+  height: 18px;
+  width: 18px;
+  margin-right: 16px;
+}
+
+.contact-us-container {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.social-media-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}

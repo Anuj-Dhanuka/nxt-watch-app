@@ -36,6 +36,7 @@ const Header = props => (
               type="button"
               className="header-theme-button"
               onClick={toggleTheme}
+              data-testid="theme"
             >
               {!darkTheme && <IoMoonSharp className="header-theme-icon" />}
               {darkTheme && (
