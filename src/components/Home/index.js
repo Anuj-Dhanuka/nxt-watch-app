@@ -23,10 +23,10 @@ import Banner from '../Banner'
 import HomeCard from '../HomeCard'
 
 const apiConstraints = {
-  initial: 'initial',
-  success: 'success',
-  loading: 'loading',
-  failure: 'failure',
+  initial: 'Initial',
+  success: 'Success',
+  loading: 'Loading',
+  failure: 'Failure',
 }
 
 class Home extends Component {

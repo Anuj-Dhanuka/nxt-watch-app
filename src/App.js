@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   onClickSaveItem = (isSaved, videoItemsData) => {
+    console.log('Hi')
     if (isSaved === true) {
       this.setState(prevState => ({
         savedVideoList: [...prevState.savedVideoList, videoItemsData],

@@ -1,7 +1,6 @@
 import {Component} from 'react'
 
 import {FaFire} from 'react-icons/fa'
-import Cookies from 'js-cookie'
 
 import './index.css'
 
@@ -20,40 +19,6 @@ import {
 } from './styledComponent'
 
 class SavedVideos extends Component {
-  state = {videoListData: []}
-
-  componentDidMount() {
-    this.getTrendingVideosApi()
-  }
-
-  getTrendingVideosApi = async () => {
-    const url = 'https://apis.ccbp.in/videos/trending'
-    const jwtToken = Cookies.get('jwt_token')
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-    }
-
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok === true) {
-      const {videos} = data
-      const updatedData = videos.map(eachItem => ({
-        id: eachItem.id,
-        channel: eachItem.channel,
-        publishedAt: eachItem.published_at,
-        thumbnailUrl: eachItem.thumbnail_url,
-        title: eachItem.title,
-        viewCount: eachItem.view_count,
-      }))
-
-      this.setState({
-        videoListData: updatedData,
-      })
-    }
-  }
-
   renderNonEmptyView = (darkTheme, savedVideoList) => (
     <>
       <SavedVideosHeader darkTheme={darkTheme}>
@@ -95,12 +60,11 @@ class SavedVideos extends Component {
   )
 
   render() {
-    const {videoListData} = this.state
-    const isEmpty = videoListData.length === 0
     return (
       <ThemeContext.Consumer>
         {value => {
           const {darkTheme, savedVideoList} = value
+          const isEmpty = savedVideoList.length === 0
 
           return (
             <SavedVideosContainer

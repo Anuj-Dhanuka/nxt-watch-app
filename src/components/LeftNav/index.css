@@ -8,10 +8,15 @@
 }
 
 .ln-top-icon-container {
+  text-decoration: none;
+}
+
+.ln-icon-btn {
   display: flex;
   align-items: center;
+  background-color: transparent;
+  border: none;
   margin-bottom: 16px;
-  text-decoration: none;
 }
 
 .left-nav-top-icon {

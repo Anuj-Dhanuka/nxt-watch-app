@@ -25,29 +25,37 @@ const LeftNav = () => (
           <div>
             <div>
               <Link to="/" className="ln-top-icon-container">
-                <AiFillHome className="left-nav-top-icon" />
-                <IconTitle isActive>Home</IconTitle>
+                <button type="button" className="ln-icon-btn">
+                  <AiFillHome className="left-nav-top-icon" />
+                  <IconTitle darkTheme={darkTheme}>Home</IconTitle>
+                </button>
               </Link>
             </div>
 
             <div>
               <Link to="/trending" className="ln-top-icon-container">
-                <FaFire className="left-nav-top-icon" />
-                <IconTitle>Trending</IconTitle>
+                <button type="button" className="ln-icon-btn">
+                  <FaFire className="left-nav-top-icon" />
+                  <IconTitle darkTheme={darkTheme}>Trending</IconTitle>
+                </button>
               </Link>
             </div>
 
             <div>
               <Link to="/gaming" className="ln-top-icon-container">
-                <SiYoutubegaming className="left-nav-top-icon" />
-                <IconTitle>Gaming</IconTitle>
+                <button type="button" className="ln-icon-btn">
+                  <SiYoutubegaming className="left-nav-top-icon" />
+                  <IconTitle darkTheme={darkTheme}>Gaming</IconTitle>
+                </button>
               </Link>
             </div>
 
             <div>
               <Link to="/saved-videos" className="ln-top-icon-container">
-                <MdPlaylistAdd className="left-nav-top-icon" />
-                <IconTitle>Saved videos</IconTitle>
+                <button type="button" className="ln-icon-btn">
+                  <MdPlaylistAdd className="left-nav-top-icon" />
+                  <IconTitle darkTheme={darkTheme}>Saved videos</IconTitle>
+                </button>
               </Link>
             </div>
           </div>

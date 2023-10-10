@@ -64,12 +64,12 @@ class VideoItemDetails extends Component {
     )
   }
 
-  onClickSave = onClickSaveItem => {
+  onClickSave = () => {
     this.setState(
       prevState => ({
         isSaved: !prevState.isSaved,
       }),
-      () => this.onSave(onClickSaveItem),
+      this.onSave,
     )
   }
 
@@ -87,9 +87,19 @@ class VideoItemDetails extends Component {
     }
   }
 
-  onSave = onClickSaveItem => {
-    const {isSaved, videoItemsData} = this.state
-    onClickSaveItem(isSaved, videoItemsData)
+  onSave = () => {
+    console.log('Hi')
+
+    return (
+      <ThemeContext.Consumer>
+        {value => {
+          const {onClickSaveItem} = value
+          const {isSaved, videoItemsData} = this.state
+
+          onClickSaveItem(isSaved, videoItemsData)
+        }}
+      </ThemeContext.Consumer>
+    )
   }
 
   OnClickRetry = () => {
@@ -149,7 +159,7 @@ class VideoItemDetails extends Component {
     </div>
   )
 
-  renderVideoItemSuccessView = (darkTheme, onClickSaveItem) => {
+  renderVideoItemSuccessView = darkTheme => {
     const {
       videoItemsData,
       channelData,
@@ -202,10 +212,7 @@ class VideoItemDetails extends Component {
               </div>
             </IconBtn>
             {!isSaved && (
-              <IconBtn
-                type="button"
-                onClick={() => this.onClickSave(onClickSaveItem)}
-              >
+              <IconBtn type="button" onClick={this.onClickSave}>
                 <div className="like-icon-container">
                   <MdPlaylistAdd className="video-items-like-icon" />
                   <p className="video-item-like-text">Save</p>
@@ -213,10 +220,7 @@ class VideoItemDetails extends Component {
               </IconBtn>
             )}
             {isSaved && (
-              <IconBtn
-                type="button"
-                onClick={() => this.onClickSave(onClickSaveItem)}
-              >
+              <IconBtn type="button" onClick={this.onClickSave}>
                 <div className="like-icon-container">
                   <MdPlaylistAdd className="video-items-like-icon active-fill-class" />
                   <p className="video-item-like-text active-fill-class">
@@ -274,13 +278,13 @@ class VideoItemDetails extends Component {
     </div>
   )
 
-  renderFinalView = (darkTheme, onClickSaveItem) => {
+  renderFinalView = darkTheme => {
     const {apiStatus} = this.state
     switch (apiStatus) {
       case apiStatusConstraint.loading:
         return this.renderVideoItemLoadingView()
       case apiStatusConstraint.success:
-        return this.renderVideoItemSuccessView(darkTheme, onClickSaveItem)
+        return this.renderVideoItemSuccessView(darkTheme)
       case apiStatusConstraint.failure:
         return this.renderVideoItemFailureView(darkTheme)
       default:
@@ -292,7 +296,7 @@ class VideoItemDetails extends Component {
     return (
       <ThemeContext.Consumer>
         {value => {
-          const {darkTheme, onClickSaveItem} = value
+          const {darkTheme} = value
 
           return (
             <VideoItemsDetailsContainer
@@ -306,7 +310,7 @@ class VideoItemDetails extends Component {
                 </VideoItemsDetailsStickyContainer>
 
                 <div className="video-item-details-right-container">
-                  {this.renderFinalView(darkTheme, onClickSaveItem)}
+                  {this.renderFinalView(darkTheme)}
                 </div>
               </div>
             </VideoItemsDetailsContainer>

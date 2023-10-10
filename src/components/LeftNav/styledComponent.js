@@ -22,7 +22,11 @@ export const LeftNavContainer = styled.nav`
 
 export const IconTitle = styled.p`
   font-family: Roboto;
-  color: ${props => (props.isActive ? '#1e293b' : '#64748b')};
+  ${props =>
+    props.isActive
+      ? `color: ${props.darkTheme ? '' : 'green'};`
+      : `color: ${props.darkTheme ? '' : 'green'};`}
+
   font-weight: 500;
 `
 
