@@ -48,3 +48,15 @@ export const CheckboxLabel = styled.label`
   font-weight: 500;
   font-size: 18px;
 `
+export const LoginBtn = styled.button`
+  background-color: #3b82f6;
+  color: #ffffff;
+  width: 90%;
+  border: 0;
+  margin-top: 24px;
+  padding: 10px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+`

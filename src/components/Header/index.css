@@ -41,3 +41,10 @@
 .header-sun-icon {
   fill: #ffffff;
 }
+
+.header-popup-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}

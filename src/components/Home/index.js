@@ -117,7 +117,7 @@ class Home extends Component {
               No Search results found
             </NoJobHeading>
             <p className="home-no-video-description">
-              Try different words or remove search filter
+              Try different key words or remove search filter
             </p>
             <button
               type="button"
@@ -147,7 +147,7 @@ class Home extends Component {
     <div className="home-no-videos-container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png"
-        alt="no videos"
+        alt="failure view"
         className="home-no-videos-img"
       />
       <NoJobHeading darkTheme={darkTheme}>

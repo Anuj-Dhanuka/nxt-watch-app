@@ -1,0 +1,71 @@
+.gaming-bg-container {
+  padding-top: 16px;
+  display: flex;
+}
+
+.gaming-right-container {
+  margin-left: 15vw;
+  padding-bottom: 36px;
+  width: 100%;
+}
+
+.gaming-header-inner-container {
+  display: flex;
+  align-items: center;
+}
+
+.gaming-game-icon {
+  fill: #ff0b37;
+  height: 30px;
+  width: 30px;
+}
+
+.gaming-card-ul-container {
+  list-style-type: none;
+  padding: 16px;
+  margin-top: 32px;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gaming-loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gaming-failure-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.gaming-failure-img {
+  height: 400px;
+  width: 400px;
+}
+
+.gaming-failure-description {
+  color: #475569;
+  font-family: Roboto;
+  margin-top: 16px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.gaming-retry-btn {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 12px;
+  height: 40px;
+  width: 90px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 5px;
+}

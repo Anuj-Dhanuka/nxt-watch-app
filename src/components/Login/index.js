@@ -10,6 +10,7 @@ import {
   Label,
   Input,
   CheckboxLabel,
+  LoginBtn,
 } from './styledComponent'
 
 import './index.css'
@@ -120,9 +121,7 @@ class Login extends Component {
                       Show Password
                     </CheckboxLabel>
                   </div>
-                  <button type="submit" className="login-button">
-                    Login
-                  </button>
+                  <LoginBtn type="submit">Login</LoginBtn>
                   {isErr && <p className="login-err-msg">*{errMsg}</p>}
                 </form>
               </LoginCard>

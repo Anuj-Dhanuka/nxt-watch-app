@@ -1,7 +1,12 @@
+.home-card-link-item-style {
+  text-decoration: none;
+}
+
 .home-card-container {
   margin-top: 16px;
   width: 277px;
   margin-right: 16px;
+  margin-bottom: 16px;
 }
 
 .home-card-main-image {

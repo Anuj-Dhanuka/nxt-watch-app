@@ -1,0 +1,27 @@
+.not-found-bg-container {
+  padding-top: 16px;
+  display: flex;
+  height: 100%;
+}
+
+.not-found-right-container {
+  padding: 16px;
+  margin-left: 14vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.not-found-img {
+  height: 400px;
+  width: 400px;
+}
+
+.not-found-description {
+  font-family: Roboto;
+  color: #94a3b8;
+  margin-top: 16px;
+}

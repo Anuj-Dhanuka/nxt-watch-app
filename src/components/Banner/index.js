@@ -1,6 +1,8 @@
 import {AiOutlineClose} from 'react-icons/ai'
+import {Link} from 'react-router-dom'
 
 import './index.css'
+import Container from './styledComponent'
 
 const Banner = props => {
   const {onClosingBanner} = props
@@ -9,13 +11,16 @@ const Banner = props => {
   }
 
   return (
-    <div className="banner-bg-container" data-testid="banner">
+    <Container data-testid="banner">
       <div className="banner-logo-close-btn-container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-          alt="nxt watch logo"
-          className="banner-logo-image"
-        />
+        <Link to="/" className="banner-link-style">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+            alt="nxt watch logo"
+            className="banner-logo-image"
+          />
+        </Link>
+
         <button
           type="button"
           className="banner-close-btn"
@@ -32,7 +37,7 @@ const Banner = props => {
       <button type="button" className="get-it-now-btn">
         GET IT NOW
       </button>
-    </div>
+    </Container>
   )
 }
 

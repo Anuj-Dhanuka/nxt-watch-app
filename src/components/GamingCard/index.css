@@ -1,0 +1,17 @@
+.gaming-card-li-container {
+  width: 300px;
+  margin-right: 16px;
+  margin-bottom: 36px;
+}
+
+.gaming-card-image {
+  width: 300px;
+  height: 400px;
+}
+
+.gaming-card-description {
+  color: #475569;
+  font-family: Roboto;
+  margin-top: 16px;
+  font-size: 16px;
+}

@@ -3,6 +3,8 @@ import {FaFire} from 'react-icons/fa'
 import {SiYoutubegaming} from 'react-icons/si'
 import {MdPlaylistAdd} from 'react-icons/md'
 
+import {Link} from 'react-router-dom'
+
 import {
   LeftNavContainer,
   IconTitle,
@@ -21,24 +23,32 @@ const LeftNav = () => (
       return (
         <LeftNavContainer darkTheme={darkTheme}>
           <div>
-            <div className="ln-top-icon-container">
-              <AiFillHome className="left-nav-top-icon" />
-              <IconTitle isActive>Home</IconTitle>
+            <div>
+              <Link to="/" className="ln-top-icon-container">
+                <AiFillHome className="left-nav-top-icon" />
+                <IconTitle isActive>Home</IconTitle>
+              </Link>
             </div>
 
-            <div className="ln-top-icon-container">
-              <FaFire className="left-nav-top-icon" />
-              <IconTitle>Trending</IconTitle>
+            <div>
+              <Link to="/trending" className="ln-top-icon-container">
+                <FaFire className="left-nav-top-icon" />
+                <IconTitle>Trending</IconTitle>
+              </Link>
             </div>
 
-            <div className="ln-top-icon-container">
-              <SiYoutubegaming className="left-nav-top-icon" />
-              <IconTitle>Gaming</IconTitle>
+            <div>
+              <Link to="/gaming" className="ln-top-icon-container">
+                <SiYoutubegaming className="left-nav-top-icon" />
+                <IconTitle>Gaming</IconTitle>
+              </Link>
             </div>
 
-            <div className="ln-top-icon-container">
-              <MdPlaylistAdd className="left-nav-top-icon" />
-              <IconTitle>Saved videos</IconTitle>
+            <div>
+              <Link to="/saved-videos" className="ln-top-icon-container">
+                <MdPlaylistAdd className="left-nav-top-icon" />
+                <IconTitle>Saved videos</IconTitle>
+              </Link>
             </div>
           </div>
           <div>
