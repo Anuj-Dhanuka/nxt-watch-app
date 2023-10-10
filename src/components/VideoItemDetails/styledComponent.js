@@ -13,7 +13,7 @@ export const VideoItemsDetailsStickyContainer = styled.div`
   top: 0;
 `
 
-export const Heading = styled.h1`
+export const Heading = styled.p`
   font-family: Roboto;
   margin-top: 24px;
   font-size: 18px;

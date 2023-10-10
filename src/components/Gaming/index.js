@@ -162,7 +162,7 @@ class Gaming extends Component {
                 </GamingStickyContainer>
 
                 <div className="gaming-right-container">
-                  {this.renderGamingSuccessView(darkTheme)}
+                  {this.renderGamingFinalView(darkTheme)}
                 </div>
               </div>
             </GamingContainer>
