@@ -24,10 +24,11 @@ export const IconTitle = styled.p`
   font-family: Roboto;
   ${props =>
     props.isActive
-      ? `color: ${props.darkTheme ? '' : 'green'};`
-      : `color: ${props.darkTheme ? '' : 'green'};`}
+      ? `color: ${props.darkTheme ? '#ffffff' : '#0f0f0f'};`
+      : `color: ${props.darkTheme ? '#ebebeb' : '#475569'};`}
 
-  font-weight: 500;
+  font-weight: ${props => (props.isActive ? '700' : '500')};
+  font-size: ${props => (props.isActive ? '16px' : '14px')};
 `
 
 export const ContactUs = styled.p`

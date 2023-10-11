@@ -29,3 +29,14 @@ export const NoJobHeading = styled.h1`
   color: ${props => (props.darkTheme ? '#ffffff' : '#231f20')};
   font-size: 36px;
 `
+
+export const FailureBtn = styled.button`
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 12px;
+  height: 40px;
+  width: 90px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 5px;
+`

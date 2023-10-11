@@ -7,6 +7,12 @@
   padding-bottom: 24px;
 }
 
+.ln-ul-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .ln-top-icon-container {
   text-decoration: none;
 }
@@ -36,4 +42,8 @@
   height: 30px;
   width: 30px;
   margin-right: 10px;
+}
+
+.ln-active-icon-fill {
+  fill: #ff0b37;
 }

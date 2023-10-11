@@ -13,6 +13,7 @@ import {
   HomeStickyContainer,
   SearchContainer,
   NoJobHeading,
+  FailureBtn,
 } from './styledComponents'
 
 import './index.css'
@@ -26,7 +27,7 @@ const apiConstraints = {
   initial: 'Initial',
   success: 'Success',
   loading: 'Loading',
-  failure: 'Failure',
+  fail: 'Failure',
 }
 
 class Home extends Component {
@@ -88,7 +89,7 @@ class Home extends Component {
         apiStatus: apiConstraints.success,
       })
     } else {
-      this.setState({apiStatus: apiConstraints.failure})
+      this.setState({apiStatus: apiConstraints.fail})
     }
   }
 
@@ -119,13 +120,9 @@ class Home extends Component {
             <p className="home-no-video-description">
               Try different key words or remove search filter
             </p>
-            <button
-              type="button"
-              className="home-retry-btn"
-              onClick={this.onClickRetryBtn}
-            >
+            <FailureBtn type="button" onClick={this.onClickRetryBtn}>
               Retry
-            </button>
+            </FailureBtn>
           </div>
         )}
         {!isEmpty && (
@@ -158,13 +155,9 @@ class Home extends Component {
         <br />
         Please Try Again.
       </p>
-      <button
-        type="button"
-        className="home-retry-btn"
-        onClick={this.onClickRetryBtn}
-      >
+      <FailureBtn type="button" onClick={this.onClickRetryBtn}>
         Retry
-      </button>
+      </FailureBtn>
     </div>
   )
 
@@ -175,7 +168,7 @@ class Home extends Component {
         return this.homeLoadingView(darkTheme)
       case apiConstraints.success:
         return this.renderHomeSuccessView(darkTheme)
-      case apiConstraints.failure:
+      case apiConstraints.fail:
         return this.renderFailureView(darkTheme)
 
       default:

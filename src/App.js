@@ -17,10 +17,14 @@ import NotFound from './components/NotFound'
 
 // Replace your code here
 class App extends Component {
-  state = {darkTheme: false, savedVideoList: []}
+  state = {darkTheme: false, savedVideoList: [], activeId: 1}
 
   onClickTheme = () => {
     this.setState(prevState => ({darkTheme: !prevState.darkTheme}))
+  }
+
+  onChangeNavActiveId = id => {
+    this.setState({activeId: id})
   }
 
   onClickSaveItem = (isSaved, videoItemsData) => {
@@ -40,7 +44,7 @@ class App extends Component {
   }
 
   render() {
-    const {darkTheme, savedVideoList} = this.state
+    const {darkTheme, savedVideoList, activeId} = this.state
     console.log(savedVideoList)
 
     return (
@@ -50,6 +54,8 @@ class App extends Component {
           onClickTheme: this.onClickTheme,
           savedVideoList,
           onClickSaveItem: this.onClickSaveItem,
+          activeId,
+          onChangeNavActiveId: this.onChangeNavActiveId,
         }}
       >
         <Switch>
